@@ -1,0 +1,28 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "Windows10CE"
+name = "FunnyArti"
+versionNumber = "1.0.1"
+description = "Makes ion surge send you where you are aiming."
+websiteUrl = "https://github.com/Windows10CE/FunnyArti"
+containsNsfwContent = false
+
+[package.dependencies]
+bbepis-BepInExPack = "5.4.2103"
+tristanmcpherson-R2API = "4.4.1"
+
+[build]
+icon = "icon.png"
+readme = "README.md"
+outdir = "build"
+
+[[build.copy]]
+source = "./bin/Release/netstandard2.0/FunnyArti.dll"
+target = "FunnyArti.dll"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["riskofrain2"]
+categories = ["skills", "tweaks", "mods"]
